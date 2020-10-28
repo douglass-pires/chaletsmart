@@ -20,14 +20,47 @@
   <link href="../css/sb-admin-2.css" rel="stylesheet">
 <style>
 .acende-quarto{
-  display:unset!important;
+  opacity:1!important;
   padding-top: 301px;
   width: 38%;
   padding-left: 3.25%;
   margin-left: 48.6%;
 }
 #acendeQuarto{
-  display:none;
+  opacity:0;
+  padding-top: 301px;
+  width: 38%;
+  padding-left: 3.25%;
+  margin-left: 48.6%;
+}
+.acende-sala{
+  opacity:1!important;
+  width: 33%;
+  padding-left: 0%;
+  margin-left: 33%;
+  margin-top: -41px;
+}
+#acendeSala{
+  opacity:0;
+  width: 33%;
+  padding-left: 0%;
+  margin-left: 33%;
+  margin-top: -41px;
+}
+.acende-cozinha{
+  opacity:1!important;
+  padding-top: 11px;
+  width: 32%;
+  padding-left: 0%;
+  margin-left: 62.8%;
+}
+#acendeCozinha{
+  opacity:0;
+  padding-top: 11px;
+  width: 32%;
+  padding-left: 0%;
+  margin-left: 62.8%;
+  }
 }
 </style>
 
@@ -49,7 +82,7 @@
         <div class="sidebar-brand-text mx-2">CHALET SMART</div>
       </a>-->
 
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard/index.html" style="height: 17%;">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard/index.html" style="height: 14%;">
           <div class="sidebar-brand-icon">
             <img src="../images/logo.png" style="width: 74%;">
           </div>
@@ -103,14 +136,14 @@
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        MÉTRICAS
+        ALARME
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link collapsed" href="../seguranca/index.html">
           <i class="fas fa-chart-line"></i>
-          <span>Consumo</span>
+          <span>Segurança</span>
         </a>
       </li>
 
@@ -282,10 +315,15 @@
 
 
           <div class="row">
+
             <div class="col-sm-12 col-md-12 col-lg-6">
-               <h1 class="h3 mb-0 text-gray-800"></h1>
+
                <img src="../images/luz-quarto.png" id="acendeQuarto">
+               <img src="../images/luz-cozinha.png" id="acendeCozinha">
+               <img src="../images/luz-sala.png" id="acendeSala">
             </div>
+
+
 
             <div class="col-sm-12 col-md-12 col-lg-6" style="padding-left: 152px;padding-right: 40px;">
               <h1 class="h4 mb-0 text-gray-500"></h1>
@@ -311,7 +349,7 @@
                </div>
 
                <div class="col-7">
-                 <button type="submit" class="btn btn-toggle" id="clickQuarto" data-toggle="button" aria-pressed="false" autocomplete="off">
+                 <button type="submit" class="btn btn-toggle" id="clickCozinha" data-toggle="button" aria-pressed="false" autocomplete="off">
                    <div class="handle"></div>
                  </button>
                </div>
@@ -325,7 +363,7 @@
                </div>
 
                <div class="col-7">
-                 <button type="submit" class="btn btn-toggle" id="clickQuarto" data-toggle="button" aria-pressed="false" autocomplete="off">
+                 <button type="submit" class="btn btn-toggle" id="clickSala" data-toggle="button" aria-pressed="false" autocomplete="off">
                    <div class="handle"></div>
                  </button>
                </div>

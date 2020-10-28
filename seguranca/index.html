@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Cômodos Gerais</title>
+  <title>Segurança Eletrônica</title>
 
   <!-- Custom fonts for this template-->
   <link href="../frameworks/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -29,15 +29,7 @@
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-      <!-- Sidebar - Brand
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon">
-          <i class="fas fa-home"></i>
-        </div>
-        <div class="sidebar-brand-text mx-2">CHALET SMART</div>
-      </a>-->
-
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard/index.html" style="height: 16%;">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard/index.html" style="height: 17%;">
           <div class="sidebar-brand-icon">
             <img src="../images/logo.png" style="width: 74%;">
           </div>
@@ -65,8 +57,8 @@
 
 
       <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item active">
-        <a class="nav-link collapsed" href="#" >
+      <li class="nav-item ">
+        <a class="nav-link collapsed" href="../comodos/index.html" >
           <i class="fas fa-couch"></i>
           <span>Cômodos</span>
         </a>
@@ -75,7 +67,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="../iluminacao/index.html">
           <i class="fas fa-lightbulb"></i>
-          <span>  Iluminação</span>
+          <span>&nbsp;Iluminação</span>
         </a>
       </li>
 
@@ -95,14 +87,12 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="../seguranca/index.html">
-          <i class="fas fa-chart-line"></i>
+      <li class="nav-item active">
+        <a class="nav-link collapsed" href="#">
+          <i class="fas fa-shield-alt"></i>
           <span>Segurança</span>
         </a>
       </li>
-
-
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -265,152 +255,28 @@
         <!-- Begin Page Content -->
         <div class="container example" style="background-color: white;padding: 30px;box-shadow: 0px 3px 26px -2px #cfcfcf;margin-top: 0px;">
         <div style="display:flex;">
-          <i class="fas fa-couch" style="padding-top: 5px;padding-right:9px;font-size: 26px;color: #6b6b6b;"></i>
-          <h1 class="h3 mb-0 text-gray-800">Energia Cômodos</h1>
+          <i class="fas fa-shield-alt" style="padding-top: 5px;padding-right:9px;font-size: 26px;color: #6b6b6b;"></i>
+          <h1 class="h3 mb-0 text-gray-800">Segurança Eletrônica</h1>
         </div>
           <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="col-sm-12 col-md-12 col-lg-10 ml-3">
 
               <div class="row borda mr-10n">
 
                 <div class="col-5">
-                  <h6>COZINHA</h6>
+                  <h6>ALARME</h6>
                 </div>
 
                 <div class="col-7">
-                  <button type="submit" class="btn btn-toggle" id="clickCozinha" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <button type="submit" class="btn btn-toggle" id="clickAlarme" data-toggle="button" aria-pressed="false" autocomplete="off">
                     <div class="handle"></div>
                   </button>
                 </div>
 
               </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-6">
 
-              <div class="row borda ml-10n">
-
-                <div class="col-5">
-                  <h6>QUARTO</h6>
-                </div>
-
-                <div class="col-7">
-                  <button type="submit" class="btn btn-toggle" id="clickQuarto" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <div class="handle"></div>
-                  </button>
-                </div>
-
-              </div>
-
-            </div>
           </div>
-
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6">
-
-              <div class="row borda mr-10n">
-
-                <div class="col-5">
-                  <h6>BANHEIRO</h6>
-                </div>
-
-                <div class="col-7">
-                  <button type="submit" class="btn btn-toggle" id="clickBanheiro" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <div class="handle"></div>
-                  </button>
-                </div>
-
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-6">
-
-              <div class="row borda ml-10n">
-
-                <div class="col-5">
-                  <h6>SALA</h6>
-                </div>
-
-                <div class="col-7">
-                  <button type="submit" class="btn btn-toggle" id="clickSala" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <div class="handle"></div>
-                  </button>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6">
-
-              <div class="row borda mr-10n">
-
-                <div class="col-5">
-                  <h6>QUINTAL</h6>
-                </div>
-
-                <div class="col-7">
-                  <button type="submit" class="btn btn-toggle" data-toggle="button" id="clickQuintal" aria-pressed="false" autocomplete="off">
-                    <div class="handle"></div>
-                  </button>
-                </div>
-
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-6">
-
-              <div class="row borda ml-10n">
-
-                <div class="col-5">
-                  <h6>PORTÃO</h6>
-                </div>
-
-                <div class="col-7">
-                  <button type="submit" class="btn btn-togglee" id="clickPortao" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <div class="handle"></div>
-                  </button>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6">
-
-              <div class="row borda mr-10n">
-
-                <div class="col-5">
-                  <h6>RELÊ EXTERNO</h6>
-                </div>
-
-                <div class="col-7">
-                  <button type="submit" class="btn btn-toggle" data-toggle="button" id="clickRele" aria-pressed="false" autocomplete="off">
-                    <div class="handle"></div>
-                  </button>
-                </div>
-
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-6">
-
-              <div class="row borda ml-10n">
-
-                <div class="col-5">
-                  <h6>chave geral</h6>
-                </div>
-
-                <div class="col-7">
-                  <button type="submit" class="btn btn-toggle" id="clickGeral" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <div class="handle"></div>
-                  </button>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-
 
         </div>
 
@@ -471,7 +337,7 @@
     <script src="../frameworks/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="../js/comodos.js"></script>
+    <script src="../js/seguranca.js"></script>
     <script src="../js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->

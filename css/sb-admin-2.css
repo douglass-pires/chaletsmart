@@ -12008,15 +12008,3 @@ body.sidebar-toggled footer.sticky-footer {
 .ml-10n{
   margin-left: -10px!important;
 }
-
-#acendeQuarto{
-  display:none;
-}
-
-.acende-quarto{
-  display:unset!important;
-  padding-top: 301px;
-  width: 38%;
-  padding-left: 3.25%;
-  margin-left: 48.6%;
-}

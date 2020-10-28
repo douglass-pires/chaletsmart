@@ -58,14 +58,17 @@ database.ref().on("value", function(snap){
 });
 
 // --------------- COZINHA ---------------
+
 database.ref().on("value", function(snap) {
     if (snap.val().cozinha == "0") {
         $("#clickCozinha").removeClass("active");
+        $("#acendeCozinha").removeClass("acende-cozinha");
         var luz = snap.val().qtdluzacesacoz
         var somaluzacesa = parseInt(luz) + 1
         qtdluzacesacoz = somaluzacesa
     } else {
         $("#clickCozinha").addClass("active");
+        $("#acendeCozinha").addClass("acende-cozinha");
     }
 
 });
@@ -114,6 +117,7 @@ $("#clickCozinha").on("click", function() {
 
 
 // --------------- QUARTO ---------------
+
 database.ref().on("value", function(snap) {
     if (snap.val().quarto == "0") {
         $("#acendeQuarto").removeClass("acende-quarto");
@@ -150,84 +154,17 @@ $("#clickQuarto").on("click", function() {
     return false;
 });
 
-// --------------- RELE ---------------
-database.ref().on("value", function(snap) {
-    if (snap.val().rele == "0") {
-        $("#clickRele").removeClass("active");
-        var luz = snap.val().qtdluzacesarele
-        var somaluzacesa = parseInt(luz) + 1
-        qtdluzacesarele = somaluzacesa
-    } else {
-        $("#clickRele").addClass("active");
-    }
-
-});
-
-$("#clickRele").on("click", function() {
-    database.ref().on("value", function(snap) {
-        if (snap.val().rele == "0") {
-            rele = "1"
-            $("#clickRele").removeClass("active");
-            qtdluzacesatotal = (parseInt(qtdluzacesacoz) + parseInt(qtdluzacesaquarto) + parseInt(qtdluzacesarele) + parseInt(qtdluzacesaban) + parseInt(qtdluzacesasala) + parseInt(qtdluzacesaquint))-1
-        } else {
-            $("#clickRele").addClass("active");
-            rele = "0"
-        }
-
-    });
-    database.ref().update({
-        rele: rele,
-        qtdluzacesarele:qtdluzacesarele,
-        qtdluzacesatotal:qtdluzacesatotal
-    });
-
-    return false;
-});
-
-// --------------- BANHEIRO ---------------
-database.ref().on("value", function(snap) {
-    if (snap.val().banheiro == "0") {
-        $("#clickBanheiro").removeClass("active");
-        var luz = snap.val().qtdluzacesaban
-        var somaluzacesa = parseInt(luz) + 1
-        qtdluzacesaban = somaluzacesa
-    } else {
-        $("#clickBanheiro").addClass("active");
-    }
-
-});
-
-$("#clickBanheiro").on("click", function() {
-    database.ref().on("value", function(snap) {
-        if (snap.val().banheiro == "0") {
-            banheiro = "1"
-            $("#clickBanheiro").removeClass("active");
-            qtdluzacesatotal = (parseInt(qtdluzacesacoz) + parseInt(qtdluzacesaquarto) + parseInt(qtdluzacesarele) + parseInt(qtdluzacesaban) + parseInt(qtdluzacesasala) + parseInt(qtdluzacesaquint))-1
-
-        } else {
-            $("#clickBanheiro").addClass("active");
-            banheiro = "0"
-        }
-
-    });
-    database.ref().update({
-        banheiro: banheiro,
-        qtdluzacesaban:qtdluzacesaban,
-        qtdluzacesatotal:qtdluzacesatotal
-    });
-
-    return false;
-});
-
 // --------------- SALA ---------------
 database.ref().on("value", function(snap) {
     if (snap.val().sala == "0") {
         $("#clickSala").removeClass("active");
+        $("#acendeSala").removeClass("acende-sala");
         var luz = snap.val().qtdluzacesasala
         var somaluzacesa = parseInt(luz) + 1
         qtdluzacesasala = somaluzacesa
     } else {
         $("#clickSala").addClass("active");
+        $("#acendeSala").addClass("acende-sala");
     }
 
 });
@@ -248,40 +185,6 @@ $("#clickSala").on("click", function() {
     database.ref().update({
         sala: sala,
         qtdluzacesasala:qtdluzacesasala,
-        qtdluzacesatotal:qtdluzacesatotal
-    });
-
-    return false;
-});
-
-// --------------- QUINTAL ---------------
-database.ref().on("value", function(snap) {
-    if (snap.val().quintal == "0") {
-        $("#clickQuintal").removeClass("active");
-        var luz = snap.val().qtdluzacesaquint
-        var somaluzacesa = parseInt(luz) + 1
-        qtdluzacesaquint = somaluzacesa
-    } else {
-        $("#clickQuintal").addClass("active");
-    }
-
-});
-
-$("#clickQuintal").on("click", function() {
-    database.ref().on("value", function(snap) {
-        if (snap.val().quintal == "0") {
-            quintal = "1"
-            $("#clickQuintal").removeClass("active");
-            qtdluzacesatotal = (parseInt(qtdluzacesacoz) + parseInt(qtdluzacesaquarto) + parseInt(qtdluzacesarele) + parseInt(qtdluzacesaban) + parseInt(qtdluzacesasala) + parseInt(qtdluzacesaquint))-1
-        } else {
-            $("#clickQuintal").addClass("active");
-            quintal = "0"
-        }
-
-    });
-    database.ref().update({
-        quintal: quintal,
-        qtdluzacesaquint:qtdluzacesaquint,
         qtdluzacesatotal:qtdluzacesatotal
     });
 
@@ -338,39 +241,6 @@ $("#clickGeral").on("click", function() {
 
     return false;
 });
-
-
-
-// --------------- PORTAO ---------------
-database.ref().on("value", function(snap) {
-    if (snap.val().portao == "0") {
-        $("#clickPortao").removeClass("active");
-    } else {
-        $("#clickPortao").addClass("active");
-    }
-
-});
-
-$("#clickPortao").on("click", function() {
-    database.ref().on("value", function(snap) {
-        if (snap.val().portao == "0") {
-            portao = "1"
-            $("#clickPortao").removeClass("active");
-        } else {
-            $("#clickPortao").addClass("active");
-            portao = "0"
-        }
-
-    });
-    database.ref().update({
-        portao: portao
-    });
-
-    return false;
-});
-
-
-
 
 database.ref().on("value", function(snap) {
     $("#display").html(snap.val().name);
