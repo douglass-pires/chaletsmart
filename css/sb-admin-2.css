@@ -10331,6 +10331,7 @@ a:focus {
   left: calc(6.5rem + 1.5rem / 2);
   z-index: 1;
   top: 2px;
+  margin: 0px!important;
 }
 
 .sidebar .nav-item .collapse .collapse-inner {
@@ -10349,6 +10350,7 @@ a:focus {
   min-width: 10rem;
   font-size: 0.85rem;
   margin: 0 0 1rem 0;
+  background-color: #057bb3;
 }
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-header,
@@ -10371,11 +10373,15 @@ a:focus {
   text-decoration: none;
   border-radius: 0.35rem;
   white-space: nowrap;
+  color: #ffffff;
+  font-weight: 300;
 }
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item:hover,
 .sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
-  background-color: #eaecf4;
+  color: #fefefe;
+  font-weight: 300;
+  background-color: #146e99;
 }
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item:active,
@@ -10385,7 +10391,7 @@ a:focus {
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item.active,
 .sidebar .nav-item .collapsing .collapse-inner .collapse-item.active {
-  color: #4e73df;
+  color: white;
   font-weight: 700;
 }
 

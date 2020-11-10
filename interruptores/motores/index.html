@@ -9,15 +9,15 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Segurança Eletrônica</title>
+  <title>Iluminação Interruptores</title>
 
   <!-- Custom fonts for this template-->
-  <link href="../frameworks/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../../frameworks/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="../css/sb-admin-2.min.css" rel="stylesheet">
-  <link href="../css/sb-admin-2.css" rel="stylesheet">
+  <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="../../css/sb-admin-2.css" rel="stylesheet">
 
 </head>
 
@@ -26,128 +26,129 @@
   <!-- Page Wrapper -->
   <div id="wrapper">
 
-    <!--  ################  MENU LATERAL ################ -->
+
+        <!--  ################  MENU LATERAL ################ -->
 
 
-    <ul class="navbar-nav bg-gradient-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-      <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#" style="height: 19%;">
-          <div class="sidebar-brand-icon">
-            <img src="../images/logo.png" style="width: 74%;filter: brightness(1000);">
+          <!-- Sidebar - Brand -->
+          <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#" style="height: 19.1%;">
+              <div class="sidebar-brand-icon">
+                <img src="../../images/logo.png" style="width: 74%;filter: brightness(1000);">
+              </div>
+          </a>
+
+          <!-- Divider -->
+          <hr class="sidebar-divider my-0">
+
+          <!-- Nav Item - Dashboard -->
+          <li class="nav-item">
+            <a class="nav-link" href="../../dashboard/index.html">
+              <i class="fas fa-fw fa-tachometer-alt"></i>
+              <span>Dashboard</span></a>
+          </li>
+
+          <!-- Divider -->
+          <hr class="sidebar-divider">
+
+          <!-- Heading -->
+          <div class="sidebar-heading">
+            RESIDÊNCIA
           </div>
-      </a>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider my-0">
+          <!-- ##########  INTERRUPTORES ########## -->
 
-      <!-- Nav Item - Dashboard -->
+          <li class="nav-item active">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInterruptores" aria-expanded="true" aria-controls="collapseInterruptores">
+              <i class="fas fa-power-off"></i>
+              <span>Interruptores</span>
+            </a>
+            <div id="collapseInterruptores" class="collapse show" aria-labelledby="headingInterruptores" data-parent="#accordionSidebar">
+              <div class=" py-2 collapse-inner rounded">
+                <a class="collapse-item" href="../../interruptores/geral/index.html">Geral</a>
+                <a class="collapse-item " href="../../interruptores/iluminacao/index.html">Iluminação</a>
+                <a class="collapse-item active" href="../../interruptores/motores/index.html">Motores / Sensores</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- ##########  SIMULAÇÃO  ########## -->
+
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSimulacao" aria-expanded="true" aria-controls="collapseSimulacao">
+              <i class="fas fa-fw fa-cube"></i>
+              <span>Simulação</span>
+            </a>
+            <div id="collapseSimulacao" class="collapse" aria-labelledby="headingSimulacao" data-parent="#accordionSidebar">
+              <div class=" py-2 collapse-inner rounded">
+                <a class="collapse-item" href="../../simulacao/chalet-principal/index.html">Chalet Principal</a>
+                <a class="collapse-item" href="../../simulacao/chalets-vizinhos/index.html">Chalets Vizinhos</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- ##########  SEGURANÇA  ########## -->
+
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSeguranca" aria-expanded="true" aria-controls="collapseSeguranca">
+              <i class="fas fa-shield-alt"></i>
+              <span>Segurança</span>
+            </a>
+            <div id="collapseSeguranca" class="collapse" aria-labelledby="headingSeguranca" data-parent="#accordionSidebar">
+              <div class=" py-2 collapse-inner rounded">
+                <a class="collapse-item" href="../../seguranca/alarme/index.html">Alarme</a>
+                <a class="collapse-item" href="../../seguranca/historico-alarme/index.html">Histórico Alarme</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Divider -->
+          <hr class="sidebar-divider d-none d-md-block">
+
+          <div class="sidebar-heading">
+            SISTEMA
+          </div>
+
+
+          <!-- ##########  REGISTRO DADOS  ########## -->
+
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRegistro" aria-expanded="true" aria-controls="collapseRegistro">
+              <i class="fas fa-database"></i>
+              <span>Registro Dados</span>
+            </a>
+            <div id="collapseRegistro" class="collapse" aria-labelledby="headingRegistro" data-parent="#accordionSidebar">
+              <div class=" py-2 collapse-inner rounded">
+                <a class="collapse-item" href="../../registro-dados/historico-consumo/index.html">Histórico Consumo (Horas)</a>
+                <a class="collapse-item" href="../../registro-dados/consumo-diario/index.html">Consumo Diário (R$)</a>
+              </div>
+            </div>
+          </li>
+
+      <!-- ##########  CONFIGURAÇÕES ########## -->
+
       <li class="nav-item">
-        <a class="nav-link" href="../dashboard/index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        RESIDÊNCIA
-      </div>
-
-      <!-- ##########  INTERRUPTORES ########## -->
-
-      <li class="nav-item ">
-        <a class="nav-link collapsed " href="#" data-toggle="collapse" data-target="#collapseInterruptores" aria-expanded="true" aria-controls="collapseInterruptores">
-          <i class="fas fa-power-off"></i>
-          <span>Interruptores</span>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConfig" aria-expanded="true" aria-controls="collapseConfig">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Configurações</span>
         </a>
-        <div id="collapseInterruptores" class="collapse" aria-labelledby="headingInterruptores" data-parent="#accordionSidebar">
+        <div id="collapseConfig" class="collapse" aria-labelledby="headingConfig" data-parent="#accordionSidebar">
           <div class=" py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../comodos/index.html">Geral</a>
-            <a class="collapse-item" href="#">Iluminação</a>
-            <a class="collapse-item" href="#">Motores</a>
+            <a class="collapse-item" href="../../configuracao/registrar-usuario/index.html">Registrar Usuário</a>
+            <a class="collapse-item" href="#" class="dropdown-item" data-toggle="modal" data-target="#logoutModal">Sair</a>
           </div>
         </div>
       </li>
 
-      <!-- ##########  SIMULAÇÃO  ########## -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSimulacao" aria-expanded="true" aria-controls="collapseSimulacao">
-          <i class="fas fa-fw fa-cube"></i>
-          <span>Simulação</span>
-        </a>
-        <div id="collapseSimulacao" class="collapse" aria-labelledby="headingSimulacao" data-parent="#accordionSidebar">
-          <div class=" py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../iluminacao/index.html">Chalet Principal</a>
-            <a class="collapse-item" href="#">Chalets Vizinhos</a>
+          <!-- Sidebar Toggler (Sidebar) -->
+          <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
           </div>
-        </div>
-      </li>
 
-      <!-- ##########  SEGURANÇA  ########## -->
-
-      <li class="nav-item active">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSeguranca" aria-expanded="true" aria-controls="collapseSeguranca">
-          <i class="fas fa-shield-alt"></i>
-          <span>Segurança</span>
-        </a>
-        <div id="collapseSeguranca" class="collapse show" aria-labelledby="headingSeguranca" data-parent="#accordionSidebar">
-          <div class=" py-2 collapse-inner rounded">
-            <a class="collapse-item active" href="../seguranca/index.html">Alarme</a>
-            <a class="collapse-item" href="#">Histórico Alarme</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block">
-
-      <div class="sidebar-heading">
-        SISTEMA
-      </div>
-
-
-      <!-- ##########  REGISTRO DADOS  ########## -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRegistro" aria-expanded="true" aria-controls="collapseRegistro">
-          <i class="fas fa-database"></i>
-          <span>Registro Dados</span>
-        </a>
-        <div id="collapseRegistro" class="collapse" aria-labelledby="headingRegistro" data-parent="#accordionSidebar">
-          <div class=" py-2 collapse-inner rounded">
-            <a class="collapse-item" href="#">Histórico Consumo (Horas)</a>
-            <a class="collapse-item" href="#">Consumo Diário (R$)</a>
-          </div>
-        </div>
-      </li>
-
-  <!-- ##########  CONFIGURAÇÕES ########## -->
-
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConfig" aria-expanded="true" aria-controls="collapseConfig">
-      <i class="fas fa-fw fa-cog"></i>
-      <span>Configurações</span>
-    </a>
-    <div id="collapseConfig" class="collapse" aria-labelledby="headingConfig" data-parent="#accordionSidebar">
-      <div class=" py-2 collapse-inner rounded">
-        <a class="collapse-item" href="../seguranca/index.html">Registrar Usuário</a>
-        <a class="collapse-item" href="#">Sair</a>
-      </div>
-    </div>
-  </li>
-
-      <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div>
-
-    </ul>
-    <!--   ################  FIM MENU LATERAL ################ -->
-
+        </ul>
+        <!--   ################  FIM MENU LATERAL ################ -->
 
 
 
@@ -256,7 +257,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin ChaletSmart</span>
-                <img class="img-profile rounded-circle" src="../images/perfil.png">
+                <img class="img-profile rounded-circle" src="../../images/perfil.png">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -289,20 +290,59 @@
         <!-- Begin Page Content -->
         <div class="container example" style="background-color: white;padding: 30px;box-shadow: 0px 3px 26px -2px #cfcfcf;margin-top: 0px;">
         <div style="display:flex;">
-          <i class="fas fa-shield-alt" style="padding-top: 5px;padding-right:9px;font-size: 26px;color: #6b6b6b;"></i>
-          <h1 class="h3 mb-0 text-gray-800">Segurança Eletrônica</h1>
+          <i class="fas fa-lightbulb" style="padding-top: 5px;padding-right:9px;font-size: 26px;color: #6b6b6b;"></i>
+          <h1 class="h3 mb-0 text-gray-800">Interruptores Sensores / Motores</h1>
         </div>
+
+
           <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-10 ml-3">
+
+            <div class="col-sm-12 col-md-12 col-lg-6">
 
               <div class="row borda mr-10n">
+
+                <div class="col-5">
+                  <h6>PORTÃO</h6>
+                </div>
+
+                <div class="col-7">
+                  <button type="submit" class="btn btn-togglee" id="clickPortao" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <div class="handle"></div>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-6">
+
+              <div class="row borda ml-10n">
 
                 <div class="col-5">
                   <h6>ALARME</h6>
                 </div>
 
                 <div class="col-7">
-                  <button type="submit" class="btn btn-toggle" id="clickAlarme" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <button type="submit" class="btn btn-toggle" data-toggle="button" id="clickAlarme" aria-pressed="false" autocomplete="off">
+                    <div class="handle"></div>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-sm-12 col-md-12 col-lg-6">
+
+              <div class="row borda mr-10n">
+
+                <div class="col-5">
+                  <h6>TEMPERATURA</h6>
+                </div>
+
+                <div class="col-7">
+                  <button type="submit" class="btn btn-togglee" id="clickTemperatura" data-toggle="button" aria-pressed="false" autocomplete="off">
                     <div class="handle"></div>
                   </button>
                 </div>
@@ -364,22 +404,22 @@
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="../frameworks/jquery/jquery.min.js"></script>
-    <script src="../frameworks/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../frameworks/jquery/jquery.min.js"></script>
+    <script src="../../frameworks/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="../frameworks/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../../frameworks/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="../js/seguranca.js"></script>
-    <script src="../js/sb-admin-2.min.js"></script>
+    <script src="../../js/comodos.js"></script>
+    <script src="../../js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="../frameworks/chart.js/Chart.min.js"></script>
+    <script src="../../frameworks/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="../js/demo/chart-area-demo.js"></script>
-    <script src="../js/demo/chart-pie-demo.js"></script>
+    <script src="../../js/demo/chart-area-demo.js"></script>
+    <script src="../../js/demo/chart-pie-demo.js"></script>
 
 </body>
 
