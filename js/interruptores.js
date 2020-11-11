@@ -33,7 +33,12 @@ var horariototal = "";
 var horariogeral = "";
 var qtdluzacesatotal = "0";
 var user1 = "";
-
+var temperatura = "";
+var alarme = "";
+var luzchale2 = "";
+var luzchale3 = "";
+var luzchale4 = "";
+var luzchale5 = "";
 // -------------- SESSÃO USUÁRIO ---------------
 
 database.ref().on("value", function(snap){
@@ -180,6 +185,174 @@ $("#clickRele").on("click", function() {
     return false;
 });
 
+// --------------- TEMPERATURA ---------------
+database.ref().on("value", function(snap) {
+    if (snap.val().temperatura == "0") {
+        $("#clickTemperatura").removeClass("active");
+    } else {
+        $("#clickTemperatura").addClass("active");
+    }
+
+});
+
+$("#clickTemperatura").on("click", function() {
+    database.ref().on("value", function(snap) {
+        if (snap.val().temperatura == "0") {
+            temperatura = "1"
+            $("#clickTemperatura").removeClass("active");
+      } else {
+            $("#clickTemperatura").addClass("active");
+            temperatura = "0"
+        }
+
+    });
+    database.ref().update({
+        temperatura: temperatura
+    });
+
+    return false;
+});
+
+// --------------- CHALE 2 ---------------
+database.ref().on("value", function(snap) {
+    if (snap.val().luzchale2 == "0") {
+        $("#clickLuzchale2").removeClass("active");
+    } else {
+        $("#clickLuzchale2").addClass("active");
+    }
+
+});
+
+$("#clickLuzchale2").on("click", function() {
+    database.ref().on("value", function(snap) {
+        if (snap.val().luzchale2 == "0") {
+            luzchale2 = "1"
+            $("#clickLuzchale2").removeClass("active");
+      } else {
+            $("#clickLuzchale2").addClass("active");
+            luzchale2 = "0"
+        }
+
+    });
+    database.ref().update({
+        luzchale2: luzchale2
+    });
+
+    return false;
+});
+
+// --------------- CHALE 3 ---------------
+database.ref().on("value", function(snap) {
+    if (snap.val().luzchale3 == "0") {
+        $("#clickLuzchale3").removeClass("active");
+    } else {
+        $("#clickLuzchale3").addClass("active");
+    }
+
+});
+
+$("#clickLuzchale3").on("click", function() {
+    database.ref().on("value", function(snap) {
+        if (snap.val().luzchale3 == "0") {
+            luzchale3 = "1"
+            $("#clickLuzchale3").removeClass("active");
+      } else {
+            $("#clickLuzchale3").addClass("active");
+            luzchale3 = "0"
+        }
+
+    });
+    database.ref().update({
+        luzchale3: luzchale3
+    });
+
+    return false;
+});
+
+// --------------- CHALE 4 ---------------
+database.ref().on("value", function(snap) {
+    if (snap.val().luzchale4 == "0") {
+        $("#clickLuzchale4").removeClass("active");
+    } else {
+        $("#clickLuzchale4").addClass("active");
+    }
+
+});
+
+$("#clickLuzchale4").on("click", function() {
+    database.ref().on("value", function(snap) {
+        if (snap.val().luzchale4 == "0") {
+            luzchale4 = "1"
+            $("#clickLuzchale4").removeClass("active");
+      } else {
+            $("#clickLuzchale4").addClass("active");
+            luzchale4 = "0"
+        }
+
+    });
+    database.ref().update({
+        luzchale4: luzchale4
+    });
+
+    return false;
+});
+
+// --------------- CHALE 5 ---------------
+database.ref().on("value", function(snap) {
+    if (snap.val().luzchale5 == "0") {
+        $("#clickLuzchale5").removeClass("active");
+    } else {
+        $("#clickLuzchale5").addClass("active");
+    }
+
+});
+
+$("#clickLuzchale5").on("click", function() {
+    database.ref().on("value", function(snap) {
+        if (snap.val().luzchale5 == "0") {
+            luzchale5 = "1"
+            $("#clickLuzchale5").removeClass("active");
+      } else {
+            $("#clickLuzchale5").addClass("active");
+            luzchale5 = "0"
+        }
+
+    });
+    database.ref().update({
+        luzchale5: luzchale5
+    });
+
+    return false;
+});
+
+// --------------- ALARME ---------------
+database.ref().on("value", function(snap) {
+    if (snap.val().alarme == "0") {
+        $("#clickAlarme").removeClass("active");
+    } else {
+        $("#clickAlarme").addClass("active");
+    }
+
+});
+
+$("#clickAlarme").on("click", function() {
+    database.ref().on("value", function(snap) {
+        if (snap.val().alarme == "0") {
+            alarme = "1"
+            $("#clickAlarme").removeClass("active");
+      } else {
+            $("#clickAlarme").addClass("active");
+            alarme = "0"
+        }
+
+    });
+    database.ref().update({
+        alarme: alarme
+    });
+
+    return false;
+});
+
 // --------------- BANHEIRO ---------------
 database.ref().on("value", function(snap) {
     if (snap.val().banheiro == "0") {
@@ -305,6 +478,12 @@ $("#clickGeral").on("click", function() {
             rele = "1"
             cozinha = "1"
             quarto = "1"
+            alarme = "1"
+            temperatura = "1"
+            luzchale2 = "1"
+            luzchale3 = "1"
+            luzchale4 = "1"
+            luzchale5 = "1"
 
             $("#clickGeral").removeClass("active");
 
@@ -318,6 +497,12 @@ $("#clickGeral").on("click", function() {
             rele = "0"
             cozinha = "0"
             quarto = "0"
+            alarme = "0"
+            temperatura = "0"
+            luzchale2 = "0"
+            luzchale3 = "0"
+            luzchale4 = "0"
+            luzchale5 = "0"
         }
 
     });
@@ -329,7 +514,13 @@ $("#clickGeral").on("click", function() {
         cozinha : cozinha,
         rele : rele,
         banheiro : banheiro,
-        sala : sala
+        sala : sala,
+        alarme : alarme,
+        luzchale2 : luzchale2,
+        luzchale3 : luzchale3,
+        luzchale4 : luzchale4,
+        luzchale5 : luzchale5,
+        temperatura : temperatura
     });
 
     return false;
