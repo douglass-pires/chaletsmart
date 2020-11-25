@@ -19,6 +19,9 @@
   <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
   <link href="../../css/sb-admin-2.css" rel="stylesheet">
 
+  <!-- Custom styles for this page -->
+  <link href="../../frameworks/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -32,7 +35,7 @@
     <ul class="navbar-nav bg-gradient-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#" style="height: 14.3%;">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#" style="height: 18%;">
           <div class="sidebar-brand-icon">
             <img src="../../images/logo.png" style="width: 74%;filter: brightness(1000);">
           </div>
@@ -285,16 +288,86 @@
         <!-- End of Topbar -->
 
 
-                <!-- Begin Page Content -->
-                <div class="container example" style="height: 733px;padding: 30px;box-shadow: 0px 3px 26px -2px #cfcfcf;margin-top: 0px;width: 100%;background-size: 726px;background-repeat: no-repeat;background-position-x: 0%;background-position-y: 92%;">
-                <div style="display:flex;">
-                  <i class="fas fa-hourglass-half" style="padding-top: 5px;padding-right:9px;font-size: 26px;color: #6b6b6b;"></i>
-                  <h1 class="h3 mb-0 text-gray-800">Tempo de Consumo Energia</h1>
-                </div>
+
 
 
 
               <!-- ####################### CONTEÚDO AQUI ##################### -->
+              <!-- Begin Page Content -->
+              <div class="container-fluid">
+                <div class="mb-4 ml-3" style="display:flex;">
+                   <i class="fas fa-hourglass-half" style="padding-top: 5px;padding-right:9px;font-size: 26px;color: #6b6b6b;"></i>
+                   <h1 class="h3 mb-0 text-gray-800">Tempo de Consumo Energia</h1>
+                 </div>
+                <!-- DataTable -->
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Histórico Consumo</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                          <tr>
+                            <th>Interruptor</th>
+                            <th>Dia</th>
+                            <th>Horário Ativação</th>
+                            <th>Horário Desligamento</th>
+                            <th>Tempo Consumido</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Sala</td>
+                            <td>20/11</td>
+                            <td>21:00</td>
+                            <td>22:00</td>
+                            <td>1 hora</td>
+                          </tr>
+                          <tr>
+                            <td>Cozinha</td>
+                            <td>20/11</td>
+                            <td>5:00</td>
+                            <td>10:00</td>
+                            <td>5 horas</td>
+                          </tr>
+                          <tr>
+                            <td>Banheiro</td>
+                            <td>20/11</td>
+                            <td>8:30</td>
+                            <td>11:30</td>
+                            <td>3 horas</td>
+                          </tr>
+                          <tr>
+                            <td>Quintal</td>
+                            <td>20/11</td>
+                            <td>22:00</td>
+                            <td>6:00</td>
+                            <td>8 horas</td>
+                          </tr>
+                          <tr>
+                            <td>Cozinha</td>
+                            <td>21/11</td>
+                            <td>8:30</td>
+                            <td>9:00</td>
+                            <td>0,5 horas</td>
+                          </tr>
+                          <tr>
+                            <td>Quarto</td>
+                            <td>21/11</td>
+                            <td>10:23</td>
+                            <td>11:23</td>
+                            <td>1 hora</td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- /.container-fluid -->
 
 
 
@@ -357,11 +430,11 @@
     <script src="../../js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="../../frameworks/chart.js/Chart.min.js"></script>
+    <script src="../../frameworks/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../frameworks/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="../../js/demo/chart-area-demo.js"></script>
-    <script src="../../js/demo/chart-pie-demo.js"></script>
+    <script src="../../js/demo/datatables-demo.js"></script>
 
 </body>
 
