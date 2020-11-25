@@ -39,6 +39,9 @@ var luzchale2 = "";
 var luzchale3 = "";
 var luzchale4 = "";
 var luzchale5 = "";
+
+var hostDominio = "http://localhost:8080"
+
 // -------------- SESSÃO USUÁRIO ---------------
 
 database.ref().on("value", function(snap){
@@ -113,6 +116,19 @@ $("#clickCozinha").on("click", function() {
 
     });
 
+    if(cozinha == "1") {
+        //Desliga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOff/CHALET_PRINCIPAL_ILUMINACAO_COZINHA', true);
+        xhr.send()
+        
+    } else if(cozinha == "0") {
+        //Liga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOn/CHALET_PRINCIPAL_ILUMINACAO_COZINHA', true);
+        xhr.send()
+    }
+    
     return false;
 });
 
@@ -148,6 +164,21 @@ $("#clickQuarto").on("click", function() {
         qtdluzacesatotal:qtdluzacesatotal
     });
 
+    if(quarto == "1") {
+        //Desliga
+        console.log("desliga quarto")
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOff/CHALET_PRINCIPAL_ILUMINACAO_QUARTO', true);
+        xhr.send()
+        
+    } else if(quarto == "0") {
+        console.log("liga quarto")
+        //Liga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOn/CHALET_PRINCIPAL_ILUMINACAO_QUARTO', true);
+        xhr.send()
+    }
+
     return false;
 });
 
@@ -181,6 +212,19 @@ $("#clickRele").on("click", function() {
         qtdluzacesarele:qtdluzacesarele,
         qtdluzacesatotal:qtdluzacesatotal
     });
+
+    if(rele == "1") {
+        //Desliga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOff/CHALET_PRINCIPAL_ILUMINACAO_RELE_EXTERNO', true);
+        xhr.send()
+        
+    } else if(rele == "0") {
+        //Liga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOn/CHALET_PRINCIPAL_ILUMINACAO_RELE_EXTERNO', true);
+        xhr.send()
+    }
 
     return false;
 });
@@ -238,6 +282,19 @@ $("#clickLuzchale2").on("click", function() {
         luzchale2: luzchale2
     });
 
+    if(luzchale2 == "1") {
+        //Desliga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOff/CHALET_2_ILUMINACAO', true);
+        xhr.send()
+        
+    } else if(luzchale2 == "0") {
+        //Liga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOn/CHALET_2_ILUMINACAO', true);
+        xhr.send()
+    }
+
     return false;
 });
 
@@ -265,6 +322,19 @@ $("#clickLuzchale3").on("click", function() {
     database.ref().update({
         luzchale3: luzchale3
     });
+
+    if(luzchale3 == "1") {
+        //Desliga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOff/CHALET_3_ILUMINACAO', true);
+        xhr.send()
+        
+    } else if(luzchale3 == "0") {
+        //Liga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOn/CHALET_3_ILUMINACAO', true);
+        xhr.send()
+    }
 
     return false;
 });
@@ -294,6 +364,19 @@ $("#clickLuzchale4").on("click", function() {
         luzchale4: luzchale4
     });
 
+    if(luzchale4 == "1") {
+        //Desliga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOff/CHALET_4_ILUMINACAO', true);
+        xhr.send()
+        
+    } else if(luzchale4 == "0") {
+        //Liga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOn/CHALET_4_ILUMINACAO', true);
+        xhr.send()
+    }
+
     return false;
 });
 
@@ -321,6 +404,19 @@ $("#clickLuzchale5").on("click", function() {
     database.ref().update({
         luzchale5: luzchale5
     });
+
+    if(luzchale5 == "1") {
+        //Desliga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOff/CHALET_5_ILUMINACAO', true);
+        xhr.send()
+        
+    } else if(luzchale5 == "0") {
+        //Liga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOn/CHALET_5_ILUMINACAO', true);
+        xhr.send()
+    }
 
     return false;
 });
@@ -385,6 +481,19 @@ $("#clickBanheiro").on("click", function() {
         qtdluzacesatotal:qtdluzacesatotal
     });
 
+    if(banheiro == "1") {
+        //Desliga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOff/CHALET_PRINCIPAL_ILUMINACAO_BANHEIRO', true);
+        xhr.send()
+        
+    } else if(banheiro == "0") {
+        //Liga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOn/CHALET_PRINCIPAL_ILUMINACAO_BANHEIRO', true);
+        xhr.send()
+    }
+
     return false;
 });
 
@@ -420,6 +529,19 @@ $("#clickSala").on("click", function() {
         qtdluzacesatotal:qtdluzacesatotal
     });
 
+    if(sala == "1") {
+        //Desliga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOff/CHALET_PRINCIPAL_ILUMINACAO_SALA', true);
+        xhr.send()
+        
+    } else if(sala == "0") {
+        //Liga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOn/CHALET_PRINCIPAL_ILUMINACAO_SALA', true);
+        xhr.send()
+    }
+
     return false;
 });
 
@@ -453,6 +575,19 @@ $("#clickQuintal").on("click", function() {
         qtdluzacesaquint:qtdluzacesaquint,
         qtdluzacesatotal:qtdluzacesatotal
     });
+
+    if(quintal == "1") {
+        //Desliga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOff/CHALET_PRINCIPAL_ILUMINACAO_QUINTAL', true);
+        xhr.send()
+        
+    } else if(quintal == "0") {
+        //Liga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOn/CHALET_PRINCIPAL_ILUMINACAO_QUINTAL', true);
+        xhr.send()
+    }
 
     return false;
 });

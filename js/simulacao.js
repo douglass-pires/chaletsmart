@@ -35,6 +35,8 @@ var horariogeral = "";
 var qtdluzacesatotal = "0";
 var user1 = "";
 
+var hostDominio = "http://localhost:8080"
+
 // -------------- SESSÃO USUÁRIO ---------------
 
 database.ref().on("value", function(snap){
@@ -112,6 +114,19 @@ $("#clickCozinha").on("click", function() {
 
     });
 
+    if(cozinha == "1") {
+        //Desliga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOff/CHALET_PRINCIPAL_ILUMINACAO_COZINHA', true);
+        xhr.send()
+        
+    } else if(cozinha == "0") {
+        //Liga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOn/CHALET_PRINCIPAL_ILUMINACAO_COZINHA', true);
+        xhr.send()
+    }
+
     return false;
 });
 
@@ -151,6 +166,19 @@ $("#clickQuarto").on("click", function() {
         qtdluzacesatotal:qtdluzacesatotal
     });
 
+    if(quarto == "1") {
+        //Desliga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOff/CHALET_PRINCIPAL_ILUMINACAO_QUARTO', true);
+        xhr.send()
+        
+    } else if(quarto == "0") {
+        //Liga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOn/CHALET_PRINCIPAL_ILUMINACAO_QUARTO', true);
+        xhr.send()
+    }
+
     return false;
 });
 
@@ -187,6 +215,19 @@ $("#clickSala").on("click", function() {
         qtdluzacesasala:qtdluzacesasala,
         qtdluzacesatotal:qtdluzacesatotal
     });
+
+    if(sala == "1") {
+        //Desliga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOff/CHALET_PRINCIPAL_ILUMINACAO_SALA', true);
+        xhr.send()
+        
+    } else if(sala == "0") {
+        //Liga
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', hostDominio + '/consumptionTime/turnOn/CHALET_PRINCIPAL_ILUMINACAO_SALA', true);
+        xhr.send()
+    }
 
     return false;
 });

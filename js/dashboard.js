@@ -49,3 +49,32 @@ database.ref().on("value", function(snap){
 database.ref().on("value", function(snap){
   $("#qtdluzacesatotal").html((snap.val().qtdluzacesatotal))
 });
+
+getConsumo()
+
+function getConsumo() {
+  var requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+  };
+  
+  fetch("http://localhost:8080/consumptionTime/totalHours", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      document.getElementById('consumoTempo').innerHTML = transformarSegundosParaHoras(result) + " horas"
+      
+      var consumoDiario = "R$ " + getConsumoDiarioEmReais(transformarSegundosParaHoras(result))
+      consumoDiario = consumoDiario.replace(".", ",")
+      
+      document.getElementById('consumoDiario').innerHTML = consumoDiario
+    })
+    .catch(error => console.log('error', error));
+}
+
+function getConsumoDiarioEmReais(horas) {
+  return (0.18 * horas)
+}
+
+function transformarSegundosParaHoras(segundos) {
+  return Math.trunc(segundos/60);
+}
