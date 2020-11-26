@@ -21,7 +21,7 @@ fetch("http://localhost:8080/consumptionTime", requestOptions)
         var td4 = document.createElement("td");
         td4.appendChild(document.createTextNode(transformArrayDateToString(result[i].finalDateTime)))
         var td5 = document.createElement("td");
-        td5.appendChild(document.createTextNode("2 horas"))
+        td5.appendChild(document.createTextNode(((result[i].totalTime/60).toFixed(2) + " horas").replace(".", ",")))
 
         tr.appendChild(td1)
         tr.appendChild(td2)

@@ -32,7 +32,7 @@
     <ul class="navbar-nav bg-gradient-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#" style="height: 14.3%;">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#" style="height: 18%;">
           <div class="sidebar-brand-icon">
             <img src="../../images/logo.png" style="width: 74%;filter: brightness(1000);">
           </div>
@@ -285,19 +285,47 @@
         <!-- End of Topbar -->
 
 
-                <!-- Begin Page Content -->
-                <div class="container example" style="height: 733px;padding: 30px;box-shadow: 0px 3px 26px -2px #cfcfcf;margin-top: 0px;width: 100%;background-size: 726px;background-repeat: no-repeat;background-position-x: 0%;background-position-y: 92%;">
-                <div style="display:flex;">
-                  <i class="fas fa-history" style="padding-top: 5px;padding-right:9px;font-size: 26px;color: #6b6b6b;"></i>
-                  <h1 class="h3 mb-0 text-gray-800">Histórico de Acionamento do Alarme</h1>
-                </div>
+                
 
 
 
 
               <!-- ####################### CONTEÚDO AQUI ##################### -->
 
+              <!-- ####################### CONTEÚDO AQUI ##################### -->
+              <!-- Begin Page Content -->
+              <div class="container-fluid">
+                <div class="mb-4 ml-3" style="display:flex;">
+                  <i class="fas fa-unlock" style="padding-top: 5px;padding-right:9px;font-size: 26px;color: #6b6b6b;"></i>
+                   <h1 class="h3 mb-0 text-gray-800">Tabela do histórico de alarmes disparados</h1>
+                 </div>
+                <!-- DataTable -->
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Histórico Alarmes</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                          <tr>
+                            <th>Dia</th>
+                            <th>Horario</th>
+                          </tr>
+                        </thead>
+                        <tbody id="tBody">
+                          <tr>
+                            <td>24/11/2020</td>
+                            <td>19:02:55</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
 
+              </div>
+              <!-- /.container-fluid -->
 
 
       </div>
@@ -358,11 +386,11 @@
     <script src="../../js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="../../frameworks/chart.js/Chart.min.js"></script>
+    <script src="../../frameworks/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../frameworks/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="../../js/demo/chart-area-demo.js"></script>
-    <script src="../../js/demo/chart-pie-demo.js"></script>
+    <script src="../../js/demo/datatables-demo.js"></script>
 
 </body>
 

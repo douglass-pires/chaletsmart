@@ -58,10 +58,10 @@ function getConsumo() {
     redirect: 'follow'
   };
   
-  fetch("http://localhost:8080/consumptionTime/totalHours", requestOptions)
+  fetch("http://localhost:8080/consumptionTime/totalSeconds", requestOptions)
     .then(response => response.text())
     .then(result => {
-      document.getElementById('consumoTempo').innerHTML = transformarSegundosParaHoras(result) + " horas"
+      document.getElementById('consumoTempo').innerHTML = (transformarSegundosParaHoras(result) + " horas").replace(".", ",")
       
       var consumoDiario = "R$ " + getConsumoDiarioEmReais(transformarSegundosParaHoras(result))
       consumoDiario = consumoDiario.replace(".", ",")
@@ -72,9 +72,9 @@ function getConsumo() {
 }
 
 function getConsumoDiarioEmReais(horas) {
-  return (0.18 * horas)
+  return (0.18 * horas).toFixed(2)
 }
 
 function transformarSegundosParaHoras(segundos) {
-  return Math.trunc(segundos/60);
+  return (segundos/60).toFixed(2);
 }
