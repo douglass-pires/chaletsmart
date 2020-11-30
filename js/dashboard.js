@@ -46,8 +46,45 @@ database.ref().on("value", function(snap){
 });
 
 // QUANTIDADE LUZ ACESA
+
+var quantidadeLuzAcesa = 0;
+
+database.ref().on("value", function(snap) {
+  if (snap.val().banheiro == "1") {
+      quantidadeLuzAcesa++
+  }
+  if (snap.val().cozinha == "1") {
+      quantidadeLuzAcesa++
+  }
+  if (snap.val().luzchale2 == "1") {
+      quantidadeLuzAcesa++
+  }
+  if (snap.val().luzchale3 == "1") {
+      quantidadeLuzAcesa++
+  }
+  if (snap.val().luzchale4 == "1") {
+      quantidadeLuzAcesa++
+  }
+  if (snap.val().luzchale5 == "1") {
+      quantidadeLuzAcesa++
+  }
+  if (snap.val().quarto == "1") {
+      quantidadeLuzAcesa++
+  }
+  if (snap.val().quintal == "1") {
+      quantidadeLuzAcesa++
+  }
+  if (snap.val().rele == "1") {
+      quantidadeLuzAcesa++
+  }
+  if (snap.val().sala == "1") {
+      quantidadeLuzAcesa++
+  }        
+
+});
+
 database.ref().on("value", function(snap){
-  $("#qtdluzacesatotal").html((snap.val().qtdluzacesatotal))
+  $("#qtdluzacesatotal").html(quantidadeLuzAcesa)
 });
 
 getConsumo()
