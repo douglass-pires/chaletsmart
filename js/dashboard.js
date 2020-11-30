@@ -58,7 +58,7 @@ function getConsumo() {
     redirect: 'follow'
   };
   
-  fetch("http://localhost:8080/consumptionTime/totalSeconds", requestOptions)
+  fetch("http://34.68.39.254:80/consumptionTime/totalSeconds", requestOptions)
     .then(response => response.text())
     .then(result => {
       document.getElementById('consumoTempo').innerHTML = (transformarSegundosParaHoras(result) + " horas").replace(".", ",")
@@ -76,5 +76,5 @@ function getConsumoDiarioEmReais(horas) {
 }
 
 function transformarSegundosParaHoras(segundos) {
-  return (segundos/60).toFixed(2);
+  return (segundos/60/60).toFixed(2);
 }

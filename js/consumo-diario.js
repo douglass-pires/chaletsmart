@@ -3,7 +3,7 @@ var requestOptions = {
     redirect: 'follow'
   };
   
-fetch("http://localhost:8080/consumptionTime/groupedByDate", requestOptions)
+fetch("http://34.68.39.254:80/consumptionTime/groupedByDate", requestOptions)
 .then(response => response.json())
 .then(result => {
     console.log(result)
