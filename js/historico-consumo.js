@@ -3,25 +3,23 @@ var requestOptions = {
     redirect: 'follow'
   };
   
-fetch("http://34.68.39.254:80/consumptionTime", requestOptions)
+fetch("http://localhost:8080/consumptionTime", requestOptions)
 .then(response => response.json())
 .then(result => {
-    for(var i = 0; i<result.length; i++) {
-        console.log(result[i].initialDateTime)
-
+    result.forEach(element => {
         var tabela = document.getElementById("tBody")
         var tr = document.createElement("tr");
 
         var td1 = document.createElement("td");
-        td1.appendChild(document.createTextNode(getTwoFirstWords(formatString(result[i].consumptionType))))
+        td1.appendChild(document.createTextNode(getTwoFirstWords(formatString(element.consumptionType))))
         var td2 = document.createElement("td");
-        td2.appendChild(document.createTextNode(formatConsumptionType(result[i].consumptionType)))
+        td2.appendChild(document.createTextNode(formatConsumptionType(element.consumptionType)))
         var td3 = document.createElement("td");
-        td3.appendChild(document.createTextNode(transformArrayDateToString(result[i].initialDateTime)))
+        td3.appendChild(document.createTextNode(transformArrayDateToString(element.initialDateTime)))
         var td4 = document.createElement("td");
-        td4.appendChild(document.createTextNode(transformArrayDateToString(result[i].finalDateTime)))
+        td4.appendChild(document.createTextNode(transformArrayDateToString(element.finalDateTime)))
         var td5 = document.createElement("td");
-        td5.appendChild(document.createTextNode(((result[i].totalTime/60).toFixed(2) + " horas").replace(".", ",")))
+        td5.appendChild(document.createTextNode(((element.totalTime/60).toFixed(2) + " horas").replace(".", ",")))
 
         tr.appendChild(td1)
         tr.appendChild(td2)
@@ -31,8 +29,33 @@ fetch("http://34.68.39.254:80/consumptionTime", requestOptions)
 
         tabela.appendChild(tr)
 
+    });
 
-    }
+    // for(var i = 0; i<result.length; i++) {
+    //     var tabela = document.getElementById("tBody")
+    //     var tr = document.createElement("tr");
+
+    //     var td1 = document.createElement("td");
+    //     td1.appendChild(document.createTextNode(getTwoFirstWords(formatString(result[i].consumptionType))))
+    //     var td2 = document.createElement("td");
+    //     td2.appendChild(document.createTextNode(formatConsumptionType(result[i].consumptionType)))
+    //     var td3 = document.createElement("td");
+    //     td3.appendChild(document.createTextNode(transformArrayDateToString(result[i].initialDateTime)))
+    //     var td4 = document.createElement("td");
+    //     td4.appendChild(document.createTextNode(transformArrayDateToString(result[i].finalDateTime)))
+    //     var td5 = document.createElement("td");
+    //     td5.appendChild(document.createTextNode(((result[i].totalTime/60).toFixed(2) + " horas").replace(".", ",")))
+
+    //     tr.appendChild(td1)
+    //     tr.appendChild(td2)
+    //     tr.appendChild(td3)
+    //     tr.appendChild(td4)
+    //     tr.appendChild(td5)
+
+    //     tabela.appendChild(tr)
+
+
+    // }
 })
 .catch(error => console.log('error', error));
 

@@ -95,7 +95,7 @@ function getConsumo() {
     redirect: 'follow'
   };
   
-  fetch("http://34.68.39.254:80/consumptionTime/totalSeconds", requestOptions)
+  fetch("http://localhost:8080/consumptionTime/totalSeconds", requestOptions)
     .then(response => response.text())
     .then(result => {
       document.getElementById('consumoTempo').innerHTML = (transformarSegundosParaHoras(result) + " horas").replace(".", ",")
