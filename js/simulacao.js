@@ -35,7 +35,7 @@ var horariogeral = "";
 var qtdluzacesatotal = "0";
 var user1 = "";
 
-var hostDominio = "http://localhost:8080"
+var hostDominio = "http://34.68.39.254:80"
 
 // -------------- SESSÃO USUÁRIO ---------------
 

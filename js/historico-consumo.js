@@ -3,7 +3,7 @@ var requestOptions = {
     redirect: 'follow'
   };
   
-fetch("http://localhost:8080/consumptionTime", requestOptions)
+fetch("http://34.68.39.254:80/consumptionTime", requestOptions)
 .then(response => response.json())
 .then(result => {
     result.forEach(element => {
