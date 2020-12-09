@@ -3,7 +3,7 @@ var requestOptions = {
     redirect: 'follow'
   };
   
-fetch("http://34.68.39.254:80/alarm", requestOptions)
+fetch("http://35.224.6.1:80/alarm", requestOptions)
 .then(response => response.json())
 .then(result => {
     for(var i = 0; i<result.length; i++) {

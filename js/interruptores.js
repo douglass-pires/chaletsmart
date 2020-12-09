@@ -40,7 +40,7 @@ var luzchale3 = "";
 var luzchale4 = "";
 var luzchale5 = "";
 
-var hostDominio = "http://34.68.39.254:80"
+var hostDominio = "http://35.224.6.1:80"
 
 // -------------- SESSÃO USUÁRIO ---------------
 
